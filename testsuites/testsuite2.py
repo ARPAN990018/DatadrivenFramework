@@ -1,5 +1,5 @@
 import time
-
+import os
 import openpyxl
 from utilityfolder import dataUtils
 from selenium import webdriver
@@ -7,7 +7,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-path = "C:\\Users\\RIC\PycharmProjects\\DatadrivenFrameworkProject\\testdata\\datafortesting.xlsx"
+path = os.path.join(os.getcwd(), "testdata", "datafortesting.xlsx")
 rownum = dataUtils.rownumber(path,"Sheet1")
 columnnum = dataUtils.columnnumber(path,"Sheet1")
 print(rownum)
